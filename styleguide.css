@@ -1,0 +1,55 @@
+body {
+
+    background-image: url("bike.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    margin: 0px;
+    background-repeat: no-repeat;
+}
+
+.half {
+  max-width: 48%;
+  margin: 0px;
+  float: left;
+  padding:5%;
+  background-color: white;
+  max-height: 100%;
+}
+
+
+
+h1 {
+  font: 50px/58px 'Teko', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #0277BD
+}
+
+p {
+  font: 16px/24px 'Georgia', Times, serif;
+  color: #9E9E9E;
+}
+
+.box {
+  border: 14px solid #BDBDBD;
+  padding: 5%
+}
+
+table {
+  font: 16px/24px 'Helvetica', Arial, sans-serif;
+  font-weight: lighter;
+  border-spacing: 0px;
+  color: #388E3C;
+  max-width: 100%;
+}
+
+td, th {
+  border-bottom: 1px solid gray;
+  padding: 4%;
+}
+
+.mark {
+  color: black;
+  font-weight: bold;
+  font-family: Arial;
+  font-size: 10px;
+}
