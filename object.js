@@ -6,6 +6,7 @@ var cookieStand = function(storeLocation, minCustomer, maxCustomer, avgSale, ope
   this.maxCustomer = maxCustomer;
   this.avgSale = avgSale;
   this.openHours = openHours;
+  this.salesArray = [];
 }
 
 //Generates random number of customers per hour.
@@ -15,14 +16,14 @@ cookieStand.prototype.generateCustomer = function(min, max) {
 
 //Determines the number of cookies sold in a given hour
 cookieStand.prototype.salesPerHour = function() {
-  var cookieHourSales = this.generateCustomer(this.minCustomer, this.maxCustomer) * this.avgSale;
+  var cookieHourSales = Math.floor(this.generateCustomer(this.minCustomer, this.maxCustomer) * this.avgSale);
+  this.salesArray.push(cookieHourSales);
   return cookieHourSales;
 }
 
 //Runs through each hour and adds to total sales.
 cookieStand.prototype.dailySalesTotal = function() {
-  var total = 0
-  var hoursSales = [];
+  var total = 0;
 
   for (i = 0; i < this.openHours; i++) {
     total += this.salesPerHour();
@@ -39,3 +40,4 @@ var sellwood = new cookieStand("Sellwood", 20, 48, 3.3, 8);
 var pearlDistrict = new cookieStand("Pearl District", 3, 24, 2.6, 8);
 
 console.log(pioneerSquare.dailySalesTotal())
+console.log(pioneerSquare.salesArray)
