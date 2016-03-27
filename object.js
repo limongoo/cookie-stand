@@ -40,10 +40,26 @@ cookieStand.prototype.addData = function() {
   var storeID = this.locationID;
   var location = document.createTextNode(this.storeLocation);
 
+  // Adds ul of title
   var ul = document.createElement('ul');
   ul.setAttribute('id', storeID);
   ul.appendChild(location);
   document.getElementById("dataDIV").appendChild(ul);
+
+  // Array to display time in list items
+  for (i=0; i < this.salesArray.length; i++) {
+    var hourArray = ["10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: "];
+    var hr = hourArray[i];
+    var hrsale = this.salesArray[i];
+
+    // Add list itmes of hours and sales per hour
+    var li = document.createElement("li");
+    var stat = hr + hrsale;
+    stat = document.createTextNode(stat);
+    li.appendChild(stat);
+    document.getElementById(storeID).appendChild(li);
+}
+
 
 }
 
