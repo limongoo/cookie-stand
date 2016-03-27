@@ -56,7 +56,7 @@ cookieStand.prototype.addData = function() {
 
     // Add list itmes of hours and sales per hour
     var li = document.createElement("li");
-    var stat = hr + hrsale + " Cookies";
+    var stat = hr + hrsale;
 
     stat = document.createTextNode(stat);
     li.appendChild(stat);
@@ -68,7 +68,7 @@ cookieStand.prototype.addData = function() {
 
   //Adds list item for total of daily sales
   var li = document.createElement("li");
-  var sltotal = document.createTextNode("Total: " + dailyTotal);
+  var sltotal = document.createTextNode("Total: " + dailyTotal + " Cookies");
   li.appendChild(sltotal);
   document.getElementById(storeID).appendChild(li);
 

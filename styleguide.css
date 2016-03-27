@@ -44,6 +44,13 @@ hr {
 }
 
 ul, ol {
+  font: 16px/24px 'Helvetica', Arial, sans-serif;
+  font-weight: bold;
+  color: #616161;
+  padding-bottom: 30px;
+}
+
+li {
   font: 14px/24px 'Helvetica', Arial, sans-serif;
   color: #616161;
   padding: 0px;
@@ -62,7 +69,7 @@ ul, ol {
 
 nav ul li{
   display: inline-block;
-  margin: 0px 40px;
+  margin: 40px;
   transition: 0.3s ease all;
   font-weight: bold;
   text-transform: uppercase;
