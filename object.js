@@ -56,7 +56,7 @@ cookieStand.prototype.addData = function() {
 
     // Add list itmes of hours and sales per hour
     var li = document.createElement("li");
-    var stat = hr + hrsale;
+    var stat = hr + hrsale + " Cookies";
 
     stat = document.createTextNode(stat);
     li.appendChild(stat);
@@ -65,12 +65,13 @@ cookieStand.prototype.addData = function() {
 
 
 
+
 }
 
 
 
 
-// Calling functions
+
 var pioneerSquare = new cookieStand("Pioneer Square", 17, 88, 5.2, 8, "pioneer");
 var portlandAirport = new cookieStand("Portland Airport", 6, 24, 1.2, 8, "airport");
 var washingtonSquare = new cookieStand("Washington Square", 11, 38, 1.9, 8, "washsquare");
@@ -80,6 +81,7 @@ var pearlDistrict = new cookieStand("Pearl District", 3, 24, 2.6, 8, "pearl");
 // console.log(pioneerSquare.dailySalesTotal());
 // console.log(pioneerSquare.salesArray);
 
+// Calling functions
 pioneerSquare.addData();
 portlandAirport.addData();
 washingtonSquare.addData();
