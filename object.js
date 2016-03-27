@@ -27,10 +27,13 @@ cookieStand.prototype.salesPerHour = function() {
 //Runs through each hour and adds to total sales and creates array of hourly sales.
 cookieStand.prototype.dailySalesTotal = function() {
   var total = 0;
+
   for (i = 0; i < this.openHours; i++) {
     total += this.salesPerHour();
   }
+  this.total = total;
   return total;
+
 }
 
 
@@ -63,8 +66,14 @@ cookieStand.prototype.addData = function() {
     document.getElementById(storeID).appendChild(li);
   }
 
+  // References from the dailySalesTotal function
+  var dailyTotal = this.total;
 
-
+  //Adds list item for total of daily sales
+  var li = document.createElement("li");
+  var sltotal = document.createTextNode("Total: " + dailyTotal);
+  li.appendChild(sltotal);
+  document.getElementById(storeID).appendChild(li);
 
 }
 
