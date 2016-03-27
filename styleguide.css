@@ -48,6 +48,7 @@ ul, ol {
   font-weight: bold;
   color: #616161;
   padding-bottom: 30px;
+  display: inline-block;
 }
 
 li {
@@ -106,4 +107,8 @@ nav ul li:hover{
   color: white;
   background-color: #616161;
   padding: 20% 0;
+}
+
+div.dataDiv ul {
+  display: inline-block;
 }
