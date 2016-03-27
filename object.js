@@ -20,7 +20,7 @@ cookieStand.prototype.generateCustomer = function(min, max) {
 //Determines the number of cookies sold in a given hour. Pushes value to saleArray.
 cookieStand.prototype.salesPerHour = function() {
   var cookieHourSales = Math.floor(this.generateCustomer(this.minCustomer, this.maxCustomer) * this.avgSale);
-  this.salesArray.push(cookieHourSales);
+  this.salesArray.push(cookieHourSales);  // display array of sales every hour
   return cookieHourSales;
 }
 
@@ -62,6 +62,7 @@ cookieStand.prototype.addData = function() {
     li.appendChild(stat);
     document.getElementById(storeID).appendChild(li);
   }
+
 
 
 }
