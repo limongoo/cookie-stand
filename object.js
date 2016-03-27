@@ -34,17 +34,16 @@ cookieStand.prototype.dailySalesTotal = function() {
 }
 
 
-
+// Method to add location in a ul format
 cookieStand.prototype.addData = function() {
- this.dailySalesTotal();
+  this.dailySalesTotal();
+  var storeID = this.locationID;
+  var location = document.createTextNode(this.storeLocation);
 
- var storeID = this.locationID;
- var location = document.createTextNode(this.storeLocation);
-
- var ul = document.createElement('ul'); //creates unordered list
- ul.setAttribute('id', storeID); //Gives list id which object assigned id
- ul.appendChild(location); //Add location property to display at top of list
- document.getElementById("dataDIV").appendChild(ul); //Adds unordered list to div on page
+  var ul = document.createElement('ul');
+  ul.setAttribute('id', storeID);
+  ul.appendChild(location);
+  document.getElementById("dataDIV").appendChild(ul);
 
 }
 
