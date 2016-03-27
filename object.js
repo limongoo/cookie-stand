@@ -1,5 +1,7 @@
+// See if js works or not
 console.log("Start");
 
+// CookieStand object constructor
 var cookieStand = function(storeLocation, minCustomer, maxCustomer, avgSale, openHours, locationID) {
   this.storeLocation = storeLocation;
   this.minCustomer = minCustomer;
@@ -25,28 +27,42 @@ cookieStand.prototype.salesPerHour = function() {
 //Runs through each hour and adds to total sales and creates array of hourly sales.
 cookieStand.prototype.dailySalesTotal = function() {
   var total = 0;
-
   for (i = 0; i < this.openHours; i++) {
     total += this.salesPerHour();
   }
-
   return total;
 }
 
-cookieStand.prototype.addTitle = function() {
-  //document.write("<ul id="location"></ul>");
-  document.write("<ul id=this.locationID></ul>");
-  document.getElementById('').innerHTML += this.storeLocation;
+
+
+cookieStand.prototype.addData = function() {
+ this.dailySalesTotal();
+
+ var storeID = this.locationID;
+ var location = document.createTextNode(this.storeLocation);
+
+ var ul = document.createElement('ul'); //creates unordered list
+ ul.setAttribute('id', storeID); //Gives list id which object assigned id
+ ul.appendChild(location); //Add location property to display at top of list
+ document.getElementById("dataDIV").appendChild(ul); //Adds unordered list to div on page
+
 }
 
 
+
+
+// Calling functions
 var pioneerSquare = new cookieStand("Pioneer Square", 17, 88, 5.2, 8, "pioneer");
 var portlandAirport = new cookieStand("Portland Airport", 6, 24, 1.2, 8, "airport");
 var washingtonSquare = new cookieStand("Washington Square", 11, 38, 1.9, 8, "washsquare");
 var sellwood = new cookieStand("Sellwood", 20, 48, 3.3, 8, "sellwood");
 var pearlDistrict = new cookieStand("Pearl District", 3, 24, 2.6, 8, "pearl");
 
-console.log(pioneerSquare.dailySalesTotal())
-console.log(pioneerSquare.salesArray)
-pioneerSquare.addTitle();
-portlandAirport.addTitle();
+// console.log(pioneerSquare.dailySalesTotal());
+// console.log(pioneerSquare.salesArray);
+
+pioneerSquare.addData();
+portlandAirport.addData();
+washingtonSquare.addData();
+sellwood.addData();
+pearlDistrict.addData();
