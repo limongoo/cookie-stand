@@ -49,6 +49,8 @@ ul, ol {
   color: #616161;
   padding-bottom: 30px;
   display: inline-block;
+  text-align: left;
+  list-style-type: none;
 }
 
 li {
@@ -56,6 +58,7 @@ li {
   color: #616161;
   padding: 0px;
   transition: 0.3s ease all;
+  padding: 4px 0px;
 }
 
 li:hover {
@@ -113,4 +116,12 @@ nav ul li:hover{
   color: white;
   background-color: #616161;
   padding: 20% 0;
+}
+
+footer p{
+  text-align: right;
+}
+
+#dataDIV {
+  text-align: center;
 }
