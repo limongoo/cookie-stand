@@ -38,7 +38,7 @@ cookieStand.prototype.dailySalesTotal = function() {
 cookieStand.prototype.addData = function() {
   this.dailySalesTotal();
   var storeID = this.locationID;
-  var location = document.createTextNode(this.storeLocation);
+  var location = document.createTextNode(this.storeLocation);  // create location text
 
   // Adds ul of title
   var ul = document.createElement('ul');  //create ul list
@@ -49,28 +49,28 @@ cookieStand.prototype.addData = function() {
 
   // Array to display time in list items
   for (i=0; i < this.salesArray.length; i++) {
-    var hourArray = ["10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: "];
+    var hourArray = ["10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: "];  // Array to display hours
 
     var hr = hourArray[i];
     var hrsale = this.salesArray[i];
 
     // Add list itmes of hours and sales per hour
-    var li = document.createElement("li");
-    var stat = hr + hrsale;
+    var li = document.createElement("li");  //create list item
+    var stat = hr + hrsale;  //hours + sales
 
-    stat = document.createTextNode(stat);
-    li.appendChild(stat);
-    document.getElementById(storeID).appendChild(li);
+    stat = document.createTextNode(stat);  //create hours + sales text
+    li.appendChild(stat); //add stat text to list item
+    document.getElementById(storeID).appendChild(li);  //add list to ul
   }
 
   // References from the dailySalesTotal function
-  var dailyTotal = this.total;
+  var dailyTotal = this.total;  // reference to dailySalesTotal
 
   //Adds list item for total of daily sales
-  var li = document.createElement("li");
-  var sltotal = document.createTextNode("Total: " + dailyTotal + " Cookies");
-  li.appendChild(sltotal);
-  document.getElementById(storeID).appendChild(li);
+  var li = document.createElement("li");  //create list item
+  var sltotal = document.createTextNode("Total: " + dailyTotal + " Cookies");  //create text Total: dailyTotal Cookies text
+  li.appendChild(sltotal);  //add sltotal to list item
+  document.getElementById(storeID).appendChild(li);  //add list to ul
 
 }
 
