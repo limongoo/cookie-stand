@@ -41,11 +41,11 @@ cookieStand.prototype.addData = function() {
   var location = document.createTextNode(this.storeLocation);
 
   // Adds ul of title
-  var ul = document.createElement('ul');
+  var ul = document.createElement('ul');  //create ul list
 
-  ul.setAttribute('id', storeID);
-  ul.appendChild(location);
-  document.getElementById("dataDIV").appendChild(ul);
+  ul.setAttribute('id', storeID);  //assigns storeID to ul id
+  ul.appendChild(location);  //adds location name to top of list
+  document.getElementById("dataDIV").appendChild(ul);  //adds ul to dataDIV
 
   // Array to display time in list items
   for (i=0; i < this.salesArray.length; i++) {
@@ -76,19 +76,44 @@ cookieStand.prototype.addData = function() {
 
 
 // Location data
-var pioneerSquare = new cookieStand("Pioneer Square", 17, 88, 5.2, 8, "pioneer");
-var portlandAirport = new cookieStand("Portland Airport", 6, 24, 1.2, 8, "airport");
-var washingtonSquare = new cookieStand("Washington Square", 11, 38, 1.9, 8, "washsquare");
-var sellwood = new cookieStand("Sellwood", 20, 48, 3.3, 8, "sellwood");
-var pearlDistrict = new cookieStand("Pearl District", 3, 24, 2.6, 8, "pearl");
+// var pioneerSquare = new cookieStand("Pioneer Square", 17, 88, 5.2, 8, "pioneer");
+// var portlandAirport = new cookieStand("Portland Airport", 6, 24, 1.2, 8, "airport");
+// var washingtonSquare = new cookieStand("Washington Square", 11, 38, 1.9, 8, "washsquare");
+// var sellwood = new cookieStand("Sellwood", 20, 48, 3.3, 8, "sellwood");
+// var pearlDistrict = new cookieStand("Pearl District", 3, 24, 2.6, 8, "pearl");
+//
+// // console.log(pioneerSquare.dailySalesTotal());
+// // console.log(pioneerSquare.salesArray);
+//
+//
+// // Calling functions
+// pioneerSquare.addData();
+// portlandAirport.addData();
+// washingtonSquare.addData();
+// sellwood.addData();
+// pearlDistrict.addData();
 
-// console.log(pioneerSquare.dailySalesTotal());
-// console.log(pioneerSquare.salesArray);
+
+// Location Data Array
+var cookieAdd = new Array();
+cookieAdd.push(new cookieStand("Pioneer Square", 17, 88, 5.2, 8, "pioneer"));
+cookieAdd.push(new cookieStand("Portland Airport", 6, 24, 1.2, 8, "airport"));
+cookieAdd.push(new cookieStand("Washington Square", 11, 38, 1.9, 8, "washsquare"));
+cookieAdd.push(new cookieStand("Sellwood", 20, 48, 3.3, 8, "sellwood"));
+cookieAdd.push(new cookieStand("Pearl District", 3, 24, 2.6, 8, "pearl"));
+
+// Function to put cookieAdd aray through the addData method
+function addNew() {
+  for (var i=0; i < cookieAdd.length; i++){
+    var cookieAddData = cookieAdd[i];
+    cookieAddData.addData();
+  }
+}
+
+// Calling addNew Function
+addNew();
 
 
-// Calling functions
-pioneerSquare.addData();
-portlandAirport.addData();
-washingtonSquare.addData();
-sellwood.addData();
-pearlDistrict.addData();
+
+// See if console log runs through to the end
+console.log("End");
