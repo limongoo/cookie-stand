@@ -39,27 +39,20 @@ cookieStand.prototype.dailySalesTotal = function() {
 }
 
 
-// // Create tr and td for table header to display times
-// var headerArray = ["Location:", "10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: ", "Total: "];  // Array to display hours
-// var table = document.getElementById('tableSample');  // reference table to tableSample ID
-// var header = table.createTHead();  // create thead
-// var row = header.insertRow(0);  // insert row in header
-// for (i = 0; i < headerArray.length; i++) {  //display array in headerArray
-//   var th = row.insertCell(i);  //insert th
-//   th.innerHTML = "<strong>" + headerArray[i] + "</strong>";
-// }
-
+// Function to create tr and td for table header to display times
 function display() {
   var headerArray = ["Location:", "10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: ", "Total: "];  // Array to display hours
   var table = document.getElementById('tableSample');  // reference table to tableSample ID
   var thead = document.createElement('thead');  // create thead
+
   table.appendChild(thead);  // add thead to table
-    for (var i = 0; i < headerArray.length; i++) { // loop to display array
-        thead.appendChild(document.createElement("th")).  // create th element and add to thead
-        appendChild(document.createTextNode(headerArray[i])); // create text to display headerArray and add to th then thead
-    }
+  for (var i = 0; i < headerArray.length; i++) { // loop to display array
+    thead.appendChild(document.createElement("th")).  // create th element and add to thead
+    appendChild(document.createTextNode(headerArray[i])); // create text to display headerArray and add to th then thead
+  }
 }
 display();
+
 
 // Add data to table method
 cookieStand.prototype.addData = function() {
@@ -100,23 +93,6 @@ cookieStand.prototype.addData = function() {
 
 }
 
-
-//   // Array to display time in list items
-//   for (i=0; i < this.salesArray.length; i++) {
-//     var hourArray = ["10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: "];  // Array to display hours
-//
-//     var hr = hourArray[i];
-//     var hrsale = this.salesArray[i];
-//
-//     // Add list itmes of hours and sales per hour
-//     var li = document.createElement("li");  //create list item
-//     var stat = hr + hrsale;  //hours + sales
-//
-//     stat = document.createTextNode(stat);  //create hours + sales text
-//     li.appendChild(stat); //add stat text to list item
-//     document.getElementById(storeID).appendChild(li);  //add list to ul
-//   }
-//
 
 
 
