@@ -50,14 +50,14 @@ cookieStand.prototype.dailySalesTotal = function() {
 // }
 
 function display() {
-var headerArray = ["Location:", "10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: ", "Total: "];  // Array to display hours
-var table = document.getElementById('tableSample');  // reference table to tableSample ID
-var thead = document.createElement('thead');
-table.appendChild(thead);
-  for (var i = 0; i < headerArray.length; i++) {
-      thead.appendChild(document.createElement("th")).
-      appendChild(document.createTextNode(headerArray[i]));
-  }
+  var headerArray = ["Location:", "10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: ", "Total: "];  // Array to display hours
+  var table = document.getElementById('tableSample');  // reference table to tableSample ID
+  var thead = document.createElement('thead');  // create thead
+  table.appendChild(thead);  // add thead to table
+    for (var i = 0; i < headerArray.length; i++) { // loop to display array
+        thead.appendChild(document.createElement("th")).  // create th element and add to thead
+        appendChild(document.createTextNode(headerArray[i])); // create text to display headerArray and add to th then thead
+    }
 }
 display();
 
