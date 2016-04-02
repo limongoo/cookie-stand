@@ -39,16 +39,27 @@ cookieStand.prototype.dailySalesTotal = function() {
 }
 
 
-// Create tr and td for table header to display times
-var headerArray = ["Location:", "10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: ", "Total: "];  // Array to display hours
-var table = document.getElementById('tableSample');  //create tr
-var header = table.createTHead();
-var row = header.insertRow(0);
-for (i = 0; i < headerArray.length; i++) {
-  var th = row.insertCell(i);
-  th.innerHTML = "<strong>" + headerArray[i] + "</strong>";
-}
+// // Create tr and td for table header to display times
+// var headerArray = ["Location:", "10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: ", "Total: "];  // Array to display hours
+// var table = document.getElementById('tableSample');  // reference table to tableSample ID
+// var header = table.createTHead();  // create thead
+// var row = header.insertRow(0);  // insert row in header
+// for (i = 0; i < headerArray.length; i++) {  //display array in headerArray
+//   var th = row.insertCell(i);  //insert th
+//   th.innerHTML = "<strong>" + headerArray[i] + "</strong>";
+// }
 
+function display() {
+var headerArray = ["Location:", "10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: ", "Total: "];  // Array to display hours
+var table = document.getElementById('tableSample');  // reference table to tableSample ID
+var thead = document.createElement('thead');
+table.appendChild(thead);
+  for (var i = 0; i < headerArray.length; i++) {
+      thead.appendChild(document.createElement("th")).
+      appendChild(document.createTextNode(headerArray[i]));
+  }
+}
+display();
 
 // Add data to table method
 cookieStand.prototype.addData = function() {
