@@ -44,40 +44,43 @@ cookieStand.prototype.addData = function() {
   this.dailySalesTotal();
   var storeID = this.locationID;
   var location = document.createTextNode(this.storeLocation);  // create location text
-
-  // Adds ul of title
-  var ul = document.createElement('ul');  //create ul list
-
-  ul.setAttribute('id', storeID);  //assigns storeID to ul id
-  ul.appendChild(location);  //adds location name to top of list
-  document.getElementById("dataDIV").appendChild(ul);  //adds ul to dataDIV
-
-  // Array to display time in list items
-  for (i=0; i < this.salesArray.length; i++) {
-    var hourArray = ["10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: "];  // Array to display hours
-
-    var hr = hourArray[i];
-    var hrsale = this.salesArray[i];
-
-    // Add list itmes of hours and sales per hour
-    var li = document.createElement("li");  //create list item
-    var stat = hr + hrsale;  //hours + sales
-
-    stat = document.createTextNode(stat);  //create hours + sales text
-    li.appendChild(stat); //add stat text to list item
-    document.getElementById(storeID).appendChild(li);  //add list to ul
-  }
-
-  // References from the dailySalesTotal function
   var dailyTotal = this.total;  // reference to dailySalesTotal
 
-  //Adds list item for total of daily sales
-  var li = document.createElement("li");  //create list item
-  var sltotal = document.createTextNode("Total: " + dailyTotal + " Cookies");  //create text Total: dailyTotal Cookies text
-  li.appendChild(sltotal);  //add sltotal to list item
-  document.getElementById(storeID).appendChild(li);  //add list to ul
+
+  // Create tr element
+  var tr = document.createElement('tr');  //create tr
+  tr.setAttribute('id', storeID);  //assigns storeID to tr
+  document.getElementById("tableSample").appendChild(tr);  //adds tr to tableSample
+
+  // Create td element
+  var td = document.createElement('td');
+  td.appendChild(location);  //adds location name to td cell
+  document.getElementById(storeID).appendChild(td); //add td location to storeID
 
 }
+//   // Array to display time in list items
+//   for (i=0; i < this.salesArray.length; i++) {
+//     var hourArray = ["10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: "];  // Array to display hours
+//
+//     var hr = hourArray[i];
+//     var hrsale = this.salesArray[i];
+//
+//     // Add list itmes of hours and sales per hour
+//     var li = document.createElement("li");  //create list item
+//     var stat = hr + hrsale;  //hours + sales
+//
+//     stat = document.createTextNode(stat);  //create hours + sales text
+//     li.appendChild(stat); //add stat text to list item
+//     document.getElementById(storeID).appendChild(li);  //add list to ul
+//   }
+//
+//   //Adds list item for total of daily sales
+//   var li = document.createElement("li");  //create list item
+//   var sltotal = document.createTextNode("Total: " + dailyTotal + " Cookies");  //create text Total: dailyTotal Cookies text
+//   li.appendChild(sltotal);  //add sltotal to list item
+//   document.getElementById(storeID).appendChild(li);  //add list to ul
+//
+// }
 
 
 
