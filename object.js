@@ -39,6 +39,17 @@ cookieStand.prototype.dailySalesTotal = function() {
 }
 
 
+// Create tr and td for table header to display times
+var headerArray = ["Location:", "10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: ", "Total: "];  // Array to display hours
+var table = document.getElementById('tableSample');  //create tr
+var header = table.createTHead();
+var row = header.insertRow(0);
+for (i = 0; i < headerArray.length; i++) {
+  var th = row.insertCell(i);
+  th.innerHTML = "<strong>" + headerArray[i] + "</strong>";
+}
+
+
 // Add data to table method
 cookieStand.prototype.addData = function() {
   this.dailySalesTotal();
@@ -95,13 +106,7 @@ cookieStand.prototype.addData = function() {
 //     document.getElementById(storeID).appendChild(li);  //add list to ul
 //   }
 //
-//   //Adds list item for total of daily sales
-//   var li = document.createElement("li");  //create list item
-//   var sltotal = document.createTextNode("Total: " + dailyTotal + " Cookies");  //create text Total: dailyTotal Cookies text
-//   li.appendChild(sltotal);  //add sltotal to list item
-//   document.getElementById(storeID).appendChild(li);  //add list to ul
-//
-// }
+
 
 
 
