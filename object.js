@@ -39,7 +39,7 @@ cookieStand.prototype.dailySalesTotal = function() {
 }
 
 
-// Method to add location in a ul format
+// Add data to table method
 cookieStand.prototype.addData = function() {
   this.dailySalesTotal();
   var storeID = this.locationID;
@@ -59,7 +59,7 @@ cookieStand.prototype.addData = function() {
   document.getElementById(storeID).appendChild(td); //add td location to storeID
 
 
-  // Create loop to display sales every hourArray
+  // Create loop to display sales every hour in its own td cell
   for (i = 0; i < this.salesArray.length; i++) {
     var td = document.createElement('td');  // create td element
     var hrsale = this.salesArray[i];  //reference this.SaleArray[i] to hrsale
@@ -68,6 +68,14 @@ cookieStand.prototype.addData = function() {
     td.appendChild(hrsale); //add hrsale to td
     document.getElementById(storeID).appendChild(td);  //add td to storeID
   }
+
+
+  // Create td element for total sales
+  var td = document.createElement('td')  //create td element
+  var sltotal = document.createTextNode(dailyTotal);  //create text for display total sales
+  td.appendChild(sltotal);  //add sltotal to td
+  document.getElementById(storeID).appendChild(td);  //add td to storeID
+
 }
 
 
