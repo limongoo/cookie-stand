@@ -179,7 +179,10 @@ header {
 
 /* Banner ---------------------------------- */
 .backimage {
-  background: url(donut1.jpg) no-repeat center center fixed;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+    ),url(donut1.jpg) no-repeat center center fixed;
   background-size: cover;
   width: 100%;
   max-height: 600px;
@@ -187,6 +190,20 @@ header {
   text-align: center;
   padding: 15% 0%;
 }
+
+.sh1 {
+  font: 60px/68px 'Chonburi', Helvetica, Arial, sans-serif;
+}
+
+.sp {
+  font: 20px/28px 'Raleway', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.of {
+  font: 40px/28px 'Bad Script', cursive;
+}
+
 
 
 /* Body ------------------------------------*/
@@ -220,6 +237,10 @@ button {
 
 button:hover{
   background-color: #E53935;
+  color: #fff;
+}
+
+.white {
   color: #fff;
 }
 
