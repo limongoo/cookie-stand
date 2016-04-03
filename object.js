@@ -194,7 +194,7 @@ function evaluateForm(submittedForm) {
     console.log("tableworks");
     var displayData = document.getElementById("tableSample");
     cookieAdd.push(new cookieStand(newStore, min, max, avg, 8, storeID));
-    cookieAdd.cookieAdd.length[-1].addData();
+    cookieAdd[cookieAdd.length-1].addData();
   }
 }
 
