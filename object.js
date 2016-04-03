@@ -188,7 +188,7 @@ function evaluateForm(submittedForm) {
   var min = parseInt(submittedForm.min.value);
   var max = parseInt(submittedForm.max.value);
   var avg = parseInt(submittedForm.avg.value);
-  var storeID = this.locationID;
+  var storeID = newStore;
 
   if (formValid) {
     console.log("tableworks");
