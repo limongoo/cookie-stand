@@ -97,6 +97,7 @@ cookieStand.prototype.addData = function() {
 
 
 
+
 // // Method to add location in a ul format
 // cookieStand.prototype.addData = function() {
 //   this.dailySalesTotal();
@@ -161,6 +162,41 @@ function addNew() {
 
 // Calling addNew Function
 addNew();
+
+
+// Form validation to add data to table
+function evaluateForm(submittedForm) {
+  var formValid = true;
+  if (submittedForm.store.value == "") {
+    submittedForm.store.setAttribute("class", "required");
+    formValid = false;
+  }
+  if (submittedForm.min.value == "") {
+    submittedForm.min.setAttribute("class", "required");
+    formValid = false;
+  }
+  if (submittedForm.max.value == "") {
+    submittedForm.max.setAttribute("class", "required");
+    formValid = false;
+  }
+  if (submittedForm.avg.value == "") {
+    submittedForm.avg.setAttribute("class", "required");
+    formValid = false;
+  }
+
+  var newStore = submittedForm.store.value;
+  var min = parseInt(submittedForm.min.value);
+  var max = parseInt(submittedForm.max.value);
+  var avg = parseInt(submittedForm.avg.value);
+  var storeID = this.locationID;
+
+  if (formValid) {
+    console.log("tableworks");
+    var displayData = document.getElementById("tableSample");
+    cookieAdd.push(new cookieStand(newStore, min, max, avg, 8, storeID));
+    cookieAdd.cookieAdd.length[-1].addData();
+  }
+}
 
 
 // See if console log runs through to the end

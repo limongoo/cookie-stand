@@ -282,3 +282,16 @@ footer p{
 #dataDIV {
   text-align: center;
 }
+
+label.required {
+	color: red;
+}
+
+input.required {
+	background-color: #ffaaaa;
+}
+
+.small-text {
+	color: red;
+	font: 12px/24px 'Raleway', Helvetica Arial, sans-serif;
+}

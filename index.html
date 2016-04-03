@@ -33,6 +33,26 @@
       <table id="tableSample"></table>
     </div>
 
+    <form>
+      <input type="text" id="storeLocation" name="store">
+      <label for="storeLocation">Store Location: *</label><br>
+
+
+      <input type="text" id="minimumCustomer" name="min">
+      <label for="minimumCustomer">Mininum Customer: *</label><br>
+
+
+      <input type="text" id="maximumCustomer" name="max">
+      <label for="maximumCustomer">Maximum Customer: *</label><br>
+
+
+      <input type="text" id="averageSale" name="avg">
+      <label for="averageSale">Average Sale: *</label><br>
+
+      <span class="small-text">* = Required</span><br>
+      <input type="button" value="Evaluate Form" onclick="evaluateForm(this.form)">
+    </form>
+
     <footer>
       <hr>
       <p>&mdash; Ivan Limongan - Code 201 Portland</p>
