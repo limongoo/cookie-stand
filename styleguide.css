@@ -153,7 +153,7 @@ header {
 #logo a {
   color: #E53935;
   text-decoration: none;
-  transition: 0.3s ease all;
+  transition: 1s ease all;
 }
 
 #logo a:hover {
@@ -165,7 +165,7 @@ header {
   font: 14px/24px 'Raleway', Helvetica, Arial, sans-serif;
   color: #616161;
   padding: 0px;
-  transition: 0.3s ease all;
+  transition: 1s ease all;
   padding: 25px 40px;
   text-decoration: none;
 }
@@ -225,7 +225,7 @@ header {
 button {
   display: inline-block;
   margin: 40px;
-  transition: 0.3s ease all;
+  transition: 1s ease all;
   font-weight: bold;
   text-transform: uppercase;
   border: 1px solid #bdbdbd;
