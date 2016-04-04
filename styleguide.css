@@ -74,6 +74,7 @@ h1 {
 p {
   font: 16px/24px 'Raleway', Helvetica Arial, sans-serif;
   color: #616161;
+	padding-bottom: 40px;
 }
 
 table {
@@ -210,6 +211,12 @@ header {
 
 #container {
   margin: 8%
+}
+
+#container-about {
+	padding: 8%;
+	background-color: #E53935;
+	color: #fff;
 }
 
 .tablecenter {
