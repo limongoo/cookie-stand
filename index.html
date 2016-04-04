@@ -26,32 +26,35 @@
 
   <div id="container">
 
-
     <div id="dataDIV"></div>
-
+    <h2>Donut Data</h2>
     <div class="tablecenter">
       <table id="tableSample"></table>
     </div>
 
-    <form>
-      <input type="text" id="storeLocation" name="store">
-      <label for="storeLocation">Store Location: *</label><br>
+    <div class="divForm">
+      <h2>Generate New Store</h2>
+
+      <form>
+        <input type="text" id="storeLocation" name="store">
+        <label for="storeLocation"><span class="labeltext">Store Location: </span><span class="redtext">*</span></label><br>
 
 
-      <input type="text" id="minimumCustomer" name="min">
-      <label for="minimumCustomer">Mininum Customer: *</label><br>
+        <input type="text" id="minimumCustomer" name="min">
+        <label for="minimumCustomer"><span class="labeltext">Mininum Customer: </span><span class="redtext">*</span></label><br>
 
 
-      <input type="text" id="maximumCustomer" name="max">
-      <label for="maximumCustomer">Maximum Customer: *</label><br>
+        <input type="text" id="maximumCustomer" name="max">
+        <label for="maximumCustomer"><span class="labeltext">Maximum Customer: </span><span class="redtext">*</span></label><br>
 
 
-      <input type="text" id="averageSale" name="avg">
-      <label for="averageSale">Average Sale: *</label><br>
+        <input type="text" id="averageSale" name="avg">
+        <label for="averageSale"><span class="labeltext">Average Sale: </span><span class="redtext">*</span></label><br>
 
-      <span class="small-text">* = Required</span><br>
-      <input type="button" value="Generate Location" onclick="evaluateForm(this.form)">
-    </form>
+        <span class="redtext">* =<span class="small-text"> Required</span></span><br>
+        <input type="button" value="Generate Location" onclick="evaluateForm(this.form)">
+      </form>
+    </div>
 
     <footer>
       <hr>

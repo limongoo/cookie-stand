@@ -56,7 +56,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Chonburi', Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: 600;
   color: #E53935;
 }
@@ -224,7 +224,7 @@ header {
 
 button {
   display: inline-block;
-  margin: 40px;
+  margin: 0px;
   transition: 1s ease all;
   font-weight: bold;
   text-transform: uppercase;
@@ -242,6 +242,10 @@ button:hover{
 
 .white {
   color: #fff;
+}
+
+.redtext {
+	color: red;
 }
 
 .red {
@@ -283,6 +287,8 @@ footer p{
   text-align: center;
 }
 
+/* Form Styling ------------------------------------ */
+
 label.required {
 	color: red;
 }
@@ -294,4 +300,28 @@ input.required {
 .small-text {
 	color: red;
 	font: 12px/24px 'Raleway', Helvetica Arial, sans-serif;
+}
+
+.divForm {
+	padding-top: 40px;
+}
+
+input[type=text] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 10px 10px 10px 0px;
+  box-sizing: border-box;
+  border: 5px solid #ccc;
+  outline: none;
+	transition: 0.5s;
+		-webkit-transition: 0.5s;
+}
+
+input[type=text]:focus {
+  border: 5px solid #E53935;
+}
+
+.labeltext {
+	font: 16px/24px 'Raleway', Helvetica Arial, sans-serif;
+	color: #616161;
 }
