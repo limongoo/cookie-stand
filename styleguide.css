@@ -1,14 +1,64 @@
+/* Cite: Eric Meyer CSS reset: http://meyerweb.com/eric/tools/css/reset/ --------------------------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-    margin: 5%;;
-    background-color: #fff;
-    border: 14px solid #BDBDBD;
-    padding: 5%
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Typography -------------------------------------- */
+body {
+  background-color: #fff;
+  top: 70px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Teko', Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: 600;
-  color: #0277BD;
+  color: #E53935;
 }
 
 h1 {
@@ -17,26 +67,35 @@ h1 {
 }
 
 .header {
-  font: 50px/58px 'Teko', Helvetica, Arial, sans-serif;
+  font: 50px/58px 'Chonburi', Helvetica, Arial, sans-serif;
   font-weight: 600;
 }
 
 p {
-  font: 16px/24px 'Helvetica', Arial, sans-serif;
+  font: 16px/24px 'Raleway', Helvetica Arial, sans-serif;
   color: #616161;
+	padding-bottom: 40px;
 }
 
 table {
-  font: 14px/24px 'Helvetica', Arial, sans-serif;
+  font: 14px/24px 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: lighter;
   border-spacing: 0px;
   color: #000000;
   max-width: 100%;
 }
 
-td, th {
+td {
   border-bottom: 1px solid gray;
-  padding: 4%;
+  padding: 3%;
+  text-align: left;
+}
+
+th {
+  border-bottom: 1px solid gray;
+  padding: 3%;
+  text-align: left;
+  font-weight: bold;
 }
 
 hr {
@@ -44,7 +103,7 @@ hr {
 }
 
 ul, ol {
-  font: 16px/24px 'Helvetica', Arial, sans-serif;
+  font: 16px/24px 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: bold;
   color: #616161;
   padding: 0px 30px 30px;
@@ -54,7 +113,7 @@ ul, ol {
 }
 
 li {
-  font: 14px/24px 'Helvetica', Arial, sans-serif;
+  font: 14px/24px 'Raleway', Helvetica, Arial, sans-serif;
   color: #616161;
   padding: 0px;
   transition: 0.3s ease all;
@@ -63,39 +122,142 @@ li {
 
 li:hover {
   color: #fff;
-  background-color: #0277BD;
+  background-color: #E53935;
 }
 
-.listDiv {
-  display: inline-block;
-  width: 100px;
+
+/* Header Section ---------------------------- */
+
+header {
+  background: rgba(255,255,255,0.8);
+  height: 45px;
+  z-index: 200;
+  margin: 0 auto;
+  border-bottom: 1px solid #dadada;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: right;
+  padding-top: 20px;
 }
 
-.color-box{
-  display: inline-block;
-  width: 24%;
+#logo {
+  float: left;
+  font: 18px/38px 'Chonburi', Helvetica, Arial, sans-serif;
+  color: #E53935;
+  padding-left: 30px;
+
+}
+
+#logo a {
+  color: #E53935;
+  text-decoration: none;
+  transition: 1s ease all;
+}
+
+#logo a:hover {
+  color: #616161;
+  text-decoration: none;
+}
+
+#main-nav a {
+  font: 14px/24px 'Raleway', Helvetica, Arial, sans-serif;
+  color: #616161;
+  padding: 0px;
+  transition: 1s ease all;
+  padding: 25px 40px;
+  text-decoration: none;
+}
+
+#main-nav a:hover {
+  border-bottom: 1px solid #E53935;
+  color: #E53935;
+  background-color: #f9f9f9;
+
+}
+
+/* Banner ---------------------------------- */
+.backimage {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+    ),url(donut1.jpg) no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  max-height: 600px;
+  max-height: 600px;
+  text-align: center;
+  padding: 15% 0%;
+}
+
+.sh1 {
+  font: 60px/68px 'Chonburi', Helvetica, Arial, sans-serif;
+}
+
+.sp {
+  font: 20px/28px 'Raleway', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.of {
+  font: 40px/28px 'Bad Script', cursive;
+}
+
+
+
+/* Body ------------------------------------*/
+
+#container {
+  margin: 8%
+}
+
+#container-about {
+	padding: 8%;
+	background-color: #E53935;
+	color: #fff;
+}
+
+.tablecenter {
   text-align: center;
 }
 
-nav ul li{
+#stylebox {
+  margin: 5%;
+  padding: 5%;
+  border: 15px solid #bdbdbd;
+}
+
+button {
   display: inline-block;
-  margin: 40px;
-  transition: 0.3s ease all;
+  margin: 0px;
+  transition: 1s ease all;
   font-weight: bold;
   text-transform: uppercase;
   border: 1px solid #bdbdbd;
   border-radius: 5px;
-  padding: 7px 20px
+  padding: 7px 20px;
+  color: #E53935;
+  background-color: #fff;
 }
 
-nav ul li:hover{
-  background-color: #0277BD;
+button:hover{
+  background-color: #E53935;
   color: #fff;
 }
 
-.blue {
+.white {
+  color: #fff;
+}
+
+.redtext {
+	color: red;
+}
+
+.red {
   color: white;
-  background-color: #0277BD;
+  background-color: #E53935;
   padding: 20% 0;
 }
 
@@ -118,10 +280,55 @@ nav ul li:hover{
   padding: 20% 0;
 }
 
+.color-box{
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+}
+
 footer p{
   text-align: right;
 }
 
 #dataDIV {
   text-align: center;
+}
+
+/* Form Styling ------------------------------------ */
+
+label.required {
+	color: red;
+}
+
+input.required {
+	background-color: #ffaaaa;
+}
+
+.small-text {
+	color: red;
+	font: 12px/24px 'Raleway', Helvetica Arial, sans-serif;
+}
+
+.divForm {
+	padding-top: 40px;
+}
+
+input[type=text] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 10px 10px 10px 0px;
+  box-sizing: border-box;
+  border: 5px solid #ccc;
+  outline: none;
+	transition: 0.5s;
+		-webkit-transition: 0.5s;
+}
+
+input[type=text]:focus {
+  border: 5px solid #E53935;
+}
+
+.labeltext {
+	font: 16px/24px 'Raleway', Helvetica Arial, sans-serif;
+	color: #616161;
 }

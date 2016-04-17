@@ -2,24 +2,81 @@
 <html>
 <head>
   <Title>Cookie Stand - Ivan Limongan</title>
+  <link href='https://fonts.googleapis.com/css?family=Chonburi' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Teko:700,600,500' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:700,600,500,400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="styleguide.css">
 </head>
 <body>
   <header>
-    <h1>Cookie Stand Results</h1>
-    <p>&mdash; Ivan Limongan</p>
-    <hr>
+    <div id="logo"><a href="index.html">Dept. of Donut</a></div>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#sales">Sales</a>
+      <a href="#info">Info</a>
+    </nav>
   </header>
 
-  <div id="dataDIV">
+  <div class="backimage">
+    <h1 class="sh1"><span class="white">Dept. <span class="of">of</span> Donut</span></h1>
+    <p class="sp"><span class="white">Ivan Limongan &mdash; Portland, OR</span></p>
   </div>
 
-  <footer>
-    <hr>
-    <p>&mdash; Ivan Limongan - Code 201 Portland</p>
-  </footer>
+  <a name="about"></a>
+  <div id="container-about">
+
+    <h2 class="white">&mdash; About Dept. of Donut</h2>
+    <p class="white">Bacon ipsum dolor amet kevin tenderloin alcatra, corned beef boudin bresaola pork chop sausage shoulder fatback short loin filet mignon pig. Tongue andouille ribeye, leberkas tail prosciutto swine kevin ground round shoulder kielbasa fatback. Bacon boudin ball tip shank, capicola spare ribs hamburger shankle kevin. Beef short loin filet mignon doner. Pig alcatra tail pancetta, pork loin ball tip biltong swine t-bone turkey meatloaf boudin pork chop.</p>
+    <p class="white">Leberkas biltong ground round hamburger, turducken brisket tongue chicken kielbasa. Beef ribs chicken rump prosciutto, pastrami shank capicola. Fatback shankle pork loin swine flank leberkas pancetta short ribs biltong strip steak kielbasa. Brisket pork chop tongue short ribs salami, strip steak porchetta chuck swine prosciutto beef pastrami kevin. Ham hock picanha shoulder landjaeger.</p>
+    <a name="sales">.</a>
+  </div>
+
+
+  <div id="container">
+
+    <div id="dataDIV"></div>
+    <h2>&mdash; Dept. of Donut Data</h2>
+    <div class="tablecenter">
+      <table id="tableSample" align="center"></table>
+    </div>
+
+    <div class="divForm">
+      <h2>&mdash; Generate New Store</h2>
+
+      <form name="store-form">
+        <input type="text" id="storeLocation" name="store">
+        <label for="storeLocation"><span class="labeltext">Store Location: </span><span class="redtext">*</span></label><br>
+
+
+        <input type="text" id="minimumCustomer" name="min">
+        <label for="minimumCustomer"><span class="labeltext">Mininum Customer: </span><span class="redtext">*</span></label><br>
+
+
+        <input type="text" id="maximumCustomer" name="max">
+        <label for="maximumCustomer"><span class="labeltext">Maximum Customer: </span><span class="redtext">*</span></label><br>
+
+
+        <input type="text" id="averageSale" name="avg">
+        <label for="averageSale"><span class="labeltext">Average Sale: </span><span class="redtext">*</span></label><br>
+
+        <span class="redtext">* =<span class="small-text"> Required</span></span><br>
+        <input type="button" value="Generate Location" onclick="evaluateForm(this.form)">
+
+      </form>
+    </div>
+  </div>
+
+  
+
+    <footer>
+      <hr>
+      <p>&mdash; Ivan Limongan - Code 201 Portland</p>
+    </footer>
+
 
   <script type="text/javascript" src="object.js"></script>
+
 </body>
 </html>
